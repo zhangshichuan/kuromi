@@ -1,9 +1,21 @@
 <script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
+// todo
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+	<main>
+		<span>1</span>
+		<p>2</p>
+	</main>
 </template>
+
+<style lang="less" scoped>
+main {
+	span {
+		color: red;
+	}
+	p {
+		color: blue;
+	}
+}
+</style>

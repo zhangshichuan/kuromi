@@ -1,40 +1,104 @@
 # kuromi
 
-This template should help get you started developing with Vue 3 in Vite.
+> 基于 Vue3 + Typescript + NaiveUI 的基础项目配置模板
 
-## Recommended IDE Setup
+## 配置步骤
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- 具体配置参考项目里面的各类文件
 
-## Type Support for `.vue` Imports in TS
+### Vue
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+```shell
+ $ pnpm create vue@latest
 ```
 
-### Compile and Hot-Reload for Development
+### EditorConfig
 
-```sh
-pnpm dev
+```shell
+ $ touch .editorconfig
 ```
 
-### Type-Check, Compile and Minify for Production
+### Prettier
 
-```sh
-pnpm build
+```shell
+ $ pnpm add prettier -D
+
+ $ touch .prettierrc
+```
+
+### ESLint
+
+```shell
+ $ pnpm add eslint -D
+
+ $ npx eslint --init
+```
+
+### ESLint 和 Prettier 的冲突
+
+```shell
+ $ pnpm add eslint-config-prettier -D
+```
+
+### .eslintignore 和 .prettierignore
+
+```shell
+ $ touch .eslintignore .prettierignore
+```
+
+### StyleLint
+
+```shell
+ $ pnpm add stylelint stylelint-config-standard -D
+
+ $ touch .stylelintrc.js
+
+ $ pnpm add stylelint-order stylelint-config-rational-order stylelint-declaration-block-no-ignored-properties -D
+
+```
+
+### Stylelint 和 Prettier 的冲突
+
+```shell
+ $ pnpm add stylelint-config-prettier -D
+```
+
+### Lint
+
+```shell
+ $ pnpm add lint-staged -D
+```
+
+### Husky
+
+```shell
+ $ pnpm add husky -D
+```
+
+### Commitlint
+
+```shell
+ $ pnpm add @commitlint/cli @commitlint/config-conventional -D
+
+ $ touch .commitlintrc.js
+```
+
+### Changelog
+
+```shell
+ $ pnpm add conventional-changelog-cli -D
+```
+
+### NaiveUI
+
+```shell
+ $ pnpm add naive-ui -D
+
+ $ pnpm add vfonts -D
+```
+
+### Others
+
+```shell
+ $ pnpm add axios lodash dayjs blueimp-md5 normalize.css
 ```
